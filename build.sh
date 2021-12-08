@@ -19,8 +19,8 @@ exit 1
 fi
 fi
 
-export KBUILD_BUILD_USER=adithya
-export KBUILD_BUILD_HOST=ghostrider_reborn
+export KBUILD_BUILD_USER=ceijhey
+export KBUILD_BUILD_HOST=azure
 
 if [[ $1 = "-r" || $1 = "--regen" ]]; then
 make O=out ARCH=arm64 $DEFCONFIG savedefconfig
@@ -56,10 +56,8 @@ cd ..
 rm -rf AnyKernel3
 rm -rf out/arch/arm64/boot
 echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second(s) !"
-echo "Zip: $ZIPNAME"
-if ! [[ $HOSTNAME = "RyzenBeast" && $USER = "adithya" ]]; then
-curl --upload-file $ZIPNAME http://transfer.sh/$ZIPNAME; echo
-fi
+echo "Zip: $ZIPNAME"n
+transfer $ZIPNAME
 else
 echo -e "\nCompilation failed!"
 exit 1
