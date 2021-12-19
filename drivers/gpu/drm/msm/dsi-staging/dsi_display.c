@@ -6193,7 +6193,7 @@ int dsi_display_get_info(struct drm_connector *connector,
 
 	info->width_mm = phy_props.panel_width_mm;
 	info->height_mm = phy_props.panel_height_mm;
-	info->max_width = 2340;
+	info->max_width = 1920;
 	info->max_height = 1080;
 	info->qsync_min_fps =
 		display->panel->qsync_min_fps;
