@@ -12,8 +12,8 @@ DEFCONFIG="vendor/ginkgo-perf_defconfig"
 export PATH="$TC_DIR/bin:$PATH"
 
 if ! [ -d "$TC_DIR" ]; then
-echo "Proton clang not found! Cloning to $TC_DIR..."
-if ! git clone -q --depth=1 --single-branch https://github.com/kdrag0n/proton-clang $TC_DIR; then
+echo "Azure clang not found! Cloning to $TC_DIR..."
+if ! git clone -q -b main --depth=1 https://gitlab.com/Panchajanya1999/azure-clang $TC_DIR; then
 echo "Cloning failed! Aborting..."
 exit 1
 fi
